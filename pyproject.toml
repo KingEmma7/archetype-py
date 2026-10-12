@@ -38,6 +38,7 @@ Documentation = "https://github.com/MossabArektout/archetype-py"
 dev = [
   "pytest",
   "pytest-cov",
+  "hypothesis",
   "hatch",
 ]
 # Benchmarks are run with `python benchmarks/run_benchmarks.py`
