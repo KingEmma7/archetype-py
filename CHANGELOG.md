@@ -24,8 +24,16 @@
   (with or without `--infer`).
 - `independent([...])` rule helper: sibling packages must not import each
   other. Every cross-package import is reported.
+- Property-based fuzz tests (`tests/test_fuzz.py`, using Hypothesis) for
+  module patterns, `@since` / `@escalate` dates, `archetype.toml` config,
+  CODEOWNERS, and exclude patterns. `hypothesis` is now a dev dependency.
 
 ### Fixed
+- `find_matching_nodes()` / `pattern_to_regex()` could disagree with
+  `matches_pattern()` on descendant names containing a newline (e.g.
+  `"myapp.\n"` under `myapp`), because the compiled regex's `.` did not
+  match newlines. Found by the new fuzz tests; ordinary module names were
+  never affected.
 - `no_cycles()` could hang on heavily tangled import graphs, because it
   enumerated every elementary cycle (a 100-module package such as `rich`
   has millions). Enumeration now stops after 1000 cycles and says so.

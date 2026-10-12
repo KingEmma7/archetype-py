@@ -17,6 +17,7 @@ ENV/
 
 # Test / coverage
 .pytest_cache/
+.hypothesis/
 .coverage
 .coverage.*
 coverage.xml

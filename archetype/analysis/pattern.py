@@ -84,7 +84,9 @@ def pattern_to_regex(pattern: str) -> Pattern[str]:
     prefix_regex = rf"{re.escape(pattern)}\..+"
     wildcard_regex = _wildcard_pattern_to_regex(pattern)
     combined = rf"^(?:{exact_regex}|{prefix_regex}|{wildcard_regex})$"
-    return re.compile(combined)
+    # DOTALL so the descendant branch's `.+` accepts any character, exactly
+    # like matches_pattern()'s startswith() check.
+    return re.compile(combined, re.DOTALL)
 
 
 def matches_pattern(module_name: str, pattern: str) -> bool:
