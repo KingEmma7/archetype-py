@@ -1134,14 +1134,6 @@ archetype graph . --format json
 
 The graph export includes `nodes` and `edges`; each edge includes `source`, `target`, `file`, and `line`.
 
-## Architecture Visual
-
-<p align="center">
-  <img src="./assets/architecture.png" alt="archetype-py high-level architecture diagram" width="900"/>
-</p>
-
-Additional diagrams are available in [`assets/`](./assets).
-
 ## Exit Codes
 
 - `0`: no blocking failures
