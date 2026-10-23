@@ -4,6 +4,10 @@
 Contributions are welcome.
 Bug reports, feature requests, documentation improvements, and code contributions of all sizes are appreciated.
 
+First open-source contribution? Issues labeled
+[`good first issue`](https://github.com/MossabArektout/archetype-py/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+are small and self-contained. Comment on one to claim it and ask any question there, however basic.
+
 ## Before you start
 For anything beyond a small typo fix, please open an issue before writing code.
 This keeps work aligned with the project direction and helps us agree on scope early.
@@ -35,7 +39,7 @@ pytest
 - `architecture.py` defines Archetype’s own architecture rules and is used for self-enforcement.
 - `pyproject.toml` contains package metadata, dependencies, entry points, and build configuration.
 - `.github/workflows/` contains CI and release automation workflows.
-- `README.md` is the user-facing documentation and quickstart.
+- `README.md` is the user-facing overview and quickstart; `docs/` holds the full reference (rules, CLI, integrations, report formats).
 - `CHANGELOG.md` tracks release history and major changes.
 
 ## Making changes
