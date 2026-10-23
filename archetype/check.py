@@ -184,6 +184,7 @@ def _count_violations(results: list[RuleResult]) -> ViolationCounts:
 
 
 @click.group()
+@click.version_option(package_name="archetype-py", prog_name="archetype")
 def cli() -> None:
     """Archetype CLI."""
     if sys.platform == "win32":

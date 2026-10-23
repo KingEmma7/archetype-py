@@ -63,6 +63,17 @@ def _write_quiet_mode_fixture(project_path: Path) -> None:
     )
 
 
+def test_cli_version_option_prints_installed_version() -> None:
+    from importlib.metadata import version
+
+    runner = CliRunner()
+
+    result = runner.invoke(cli, ["--version"])
+
+    assert result.exit_code == 0
+    assert result.output.strip() == f"archetype, version {version('archetype-py')}"
+
+
 def test_cli_exits_one_when_architecture_file_missing(tmp_path: Path) -> None:
     project_path = _make_project_copy(tmp_path)
     runner = CliRunner()

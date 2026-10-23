@@ -1,8 +1,13 @@
 # Changelog
 
-## Unreleased
+## 0.6.0 - 2026-10-23
 
 ### Added
+- `archetype --version` prints the installed version.
+- Added a composite GitHub Action (`action.yml`) so CI setup is one line
+  (`uses: MossabArektout/archetype-py@v0.6.0`) instead of a hand-copied
+  checkout/setup-python/install/run block. Any release tag from `v0.6.0`
+  onward can be used as the ref.
 - `archetype init --infer` generates an `architecture.py` from the project's
   current import graph. It rolls module imports up to top-level packages
   and infers:
@@ -133,12 +138,6 @@
   overall change from first to latest run (or `--format json` for raw
   series data). No new analysis — reuses the count already computed for
   the JSON report contract.
-
-### Added
-- Added a composite GitHub Action (`action.yml`) so CI setup is one line
-  (`uses: MossabArektout/archetype-py@v1`) instead of a hand-copied
-  checkout/setup-python/install/run block. Requires cutting a `v1` tag
-  before that reference works; until then use `@main` or a pinned SHA.
 
 ### Documentation
 - Added GitLab CI and Azure Pipelines examples alongside the existing

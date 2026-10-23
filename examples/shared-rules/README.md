@@ -8,7 +8,7 @@ edit every copy by hand.
 
 Instead, publish the shared rules as a normal, installable Python package,
 and have each repository's `architecture.py` register them with
-[`archetype.rule.use`](../../README.md#rule-helpers).
+[`archetype.rule.use`](../../docs/rules.md#shared-inheritable-rule-packs).
 
 ## Layout of this example
 
